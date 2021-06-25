@@ -1,0 +1,49 @@
+<html>
+    <head>
+    <title>JKUATSEC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <nav class="myNav">                                 <!-- Any element can be used here -->
+            <ul class="nav-list">
+                <li class="nav-item" ></li><a class="logo" href="/"><img src="static/2.ico" alt="logo"></a></li>
+                <li class="nav-item" ><a href=login.html>Home</a></li>
+                <li class="nav-item"><a href=about.html>About</a></li>
+                <li class="nav-item"><a href="resources.html">WebResources</a></li>
+                <li class="nav-item"><a href=ctf.html>CTF</a></li>
+                <li class="nav-item"><a href=writeups.html>Writeups</a></li>
+                <li class="nav-item"><a href=leaderboard.html>Leaderboards</a></li>
+                <button class="btn-primary" onclick="location.href='register.html';">Join us</button>
+            </ul>
+        </nav>
+        <div class="login-box">      
+<h1>Register</h1>
+<form action="/register" method="POST">
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username">
+      </div>
+<!-- <div>
+    <label for="=email">Email</label>
+    <input type='email' id='email' name="email" required>
+</div> -->
+<div class="textbox">
+    <i class="fas fa-envelope"></i>
+    <input type="email" placeholder="email">
+  </div>  
+
+<div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Password">
+  </div>
+  <button type="submit" class="btn" value="">Register </button>
+<!-- <a class="btn" href="/login">Login</a> -->
+<input type="button" class="btn" onclick="location.href='/login';" value="Login" >
+
+
+ </button>
+</form>
+        </div>
+    </body>
+</html>

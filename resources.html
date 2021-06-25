@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>JKUATSEC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="static/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">  
+</head>
+    <body>
+      <nav class="myNav">                                 <!-- Any element can be used here -->
+         <ul class="nav-list">
+             <li class="nav-item" ></li><a class="logo" href="/"><img src="static/2.ico" alt="logo"></a></li>
+             <li class="nav-item" ><a href=login.html>Home</a></li>
+             <li class="nav-item"><a href=about.html>About</a></li>
+             <li class="nav-item"><a href="resources.html">WebResources</a></li>
+             <li class="nav-item"><a href=ctf.html>CTF</a></li>
+             <li class="nav-item"><a href=writeups.html>Writeups</a></li>
+             <li class="nav-item"><a href=leaderboard.html>Leaderboards</a></li>
+             <button class="btn-primary" onclick="location.href='register.html';">Join us</button>
+         </ul>
+     </nav>
+        <div class="cent"> 
+<p><strong>Introductory CTF Material</strong></p>
+<p>Interested in getting into Capture The Flag? Check these out!</p>
+<ul>
+   <li>CTF101: <a href="https://ctf101.org/" rel="nofollow">https://ctf101.org/</a></li>
+   <li>TrailOfBits CTF Field Guide: <a href="https://trailofbits.github.io/ctf/" rel="nofollow">https://trailofbits.github.io/ctf/</a></li>
+   <li>CS419: Cyber Attacks And Defense (taught by our awesome advisor, Dr. Jang, check out the Lectures at this link): <a href="https://cand.unexploitable.systems/cal.html" rel="nofollow">https://cand.unexploitable.systems/cal.html</a></li>
+   <li>PicoCTF Primer: <a href=primer.picoctf.com>primer.picoctf.com</a></a></li>
+   <li>pwn.college: <a href="https://pwn.college/">https://pwn.college/</a></li>
+</ul>
+<p><strong>Tooling</strong></p>
+<p>Not all tools will be needed to do most challenges.</p>
+<ul>
+   <li>Flare VM (Windows [Malware] Reversing): <a href="https://github.com/fireeye/flare-vm">https://github.com/fireeye/flare-vm</a></li>
+   <li>Burp Suite (Web/Network Analysis): <a href="https://portswigger.net/burp/communitydownload" rel="nofollow">https://portswigger.net/burp/communitydownload</a></li>
+   <li>Cyber Chef: <a href="https://gchq.github.io/CyberChef/" rel="nofollow">https://gchq.github.io/CyberChef/</a></li>
+   <li>PwnTools: <a href="https://github.com/Gallopsled/pwntools">https://github.com/Gallopsled/pwntools</a></li>
+   <li>IDA FreeWare: <a href="https://www.hex-rays.com/products/ida/support/download_freeware/" rel="nofollow">https://www.hex-rays.com/products/ida/support/download_freeware/</a></li>
+   <li>Binary Ninja Cloud / Demo: <a href="https://binary.ninja/demo/" rel="nofollow">https://binary.ninja/demo/</a></li>
+   <li>NSA Ghidra: <a href="https://ghidra-sre.org/" rel="nofollow">https://ghidra-sre.org/</a></li>
+   <li>Installing Ghidra on Windows 10: <a href="https://gitlab.com/osusec/resources/-/blob/master/ghidra-windows-10.md">https://gitlab.com/osusec/resources/-/blob/master/ghidra-windows-10.md</a></li>
+   <li>Zardus&#8217; CTF Tools: <a href="https://github.com/zardus/ctf-tools">https://github.com/zardus/ctf-tools</a></li>
+   <li>Pwndbg: <a href="https://github.com/pwndbg/pwndbg">https://github.com/pwndbg/pwndbg</a></li>
+   <li>Installing Autopsy on Debian Based Linux: <a href="https://gitlab.com/osusec/resources/-/blob/master/autopsy-linux.md">https://gitlab.com/osusec/resources/-/blob/master/autopsy-linux.md</a></li>
+   <li>Building John The Ripper on Linux: <a href="https://gitlab.com/osusec/resources/-/blob/master/john-linux.md">https://gitlab.com/osusec/resources/-/blob/master/john-linux.md</a></li>
+</ul>
+<p><strong>CTF / pwn &amp; Reversing Materials</strong></p>
+<p>References and cool sites related to CTF.</p>
+<ul>
+   <li>
+      References
+      <ul>
+         <li>Intel x86 Assembly Cheat Sheet: <a href="http://www.jegerlehner.ch/intel/IntelCodeTable.pdf" rel="nofollow">http://www.jegerlehner.ch/intel/IntelCodeTable.pdf</a></li>
+         <li>Yale x86 Assembly Guide: <a href="http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html" rel="nofollow">http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html</a></li>
+         <li>Wikibooks x86 Reference: <a href="https://en.wikibooks.org/wiki/X86_Assembly" rel="nofollow">https://en.wikibooks.org/wiki/X86_Assembly</a></li>
+      </ul>
+   </li>
+   <li>
+      Tool Tutorials
+      <ul>
+         <li>IDA Tutorial: <a href="https://docs.google.com/presentation/d/1hjS17xuQy3TXWGvnDxQHi0oSoadHruOOrJtmlPW1GT8/edit?usp=sharing" rel="nofollow">https://docs.google.com/presentation/d/1hjS17xuQy3TXWGvnDxQHi0oSoadHruOOrJtmlPW1GT8/edit?usp=sharing</a></li>
+      </ul>
+   </li>
+   <li>
+      Challenge Archives
+      <ul>
+         <li>CSAW Past Challenges: <a href="https://365.csaw.io/" rel="nofollow">https://365.csaw.io/</a></li>
+         <li>ShellStorm Archive: <a href="http://shell-storm.org/repo/CTF/" rel="nofollow">http://shell-storm.org/repo/CTF/</a></li>
+         <li>capture.thefl.ag Archive: <a href="https://captf.com/" rel="nofollow">https://captf.com/</a></li>
+      </ul>
+   </li>
+   <li>Pwndebug Tutorial: <a href="https://desc0n0cid0.blogspot.com/2016/09/stack-based-buffer-overflow.html" target="_blank" rel="noopener">https://desc0n0cid0.blogspot.com/2016/09/stack-based-buffer-overflow.html</a></li>
+   <li>Linux Reversing for Beginners: <a href="https://osandamalith.com/2019/02/11/linux-reverse-engineering-ctfs-for-beginners/">https://osandamalith.com/2019/02/11/linux-reverse-engineering-ctfs-for-beginners/</a></li>
+   <li>OSUSEC Fall 2018 Slides &#8220;CS271 for Pwning&#8221;: <a href="https://docs.google.com/presentation/d/1Ys0tQNGGLpcJlUu3Zkp9V5IyZXo8Cfl7DPv_HWl1xFs/edit?usp=sharing" rel="nofollow">https://docs.google.com/presentation/d/1Ys0tQNGGLpcJlUu3Zkp9V5IyZXo8Cfl7DPv_HWl1xFs/edit?usp=sharing</a></li>
+   <li>Triton Dinamic Binary Analysis: <a href="https://triton.quarkslab.com/" rel="nofollow">https://triton.quarkslab.com/</a></li>
+   <li>All of CS419 CAND&#8217;s References: <a href="https://cand.unexploitable.systems/ref.html" rel="nofollow">https://cand.unexploitable.systems/ref.html</a></li>
+   <li>CTF Libraries, Frameworks, Resources, Software, Tutorials: <a href="https://github.com/apsdehal/awesome-ctf">https://github.com/apsdehal/awesome-ctf</a></li>
+   <li>Zardus&#8217; CTF Tools: <a href="https://github.com/zardus/ctf-tools">https://github.com/zardus/ctf-tools</a></li>
+   <li>BlackHoodie X86-64 Reversing (and more): <a href="https://www.youtube.com/channel/UCzOFMTa9idgoZ9b7wWHjLUQ">https://www.youtube.com/channel/UCzOFMTa9idgoZ9b7wWHjLUQ</a></li>
+</ul>
+<p><strong>CTF Heap, GOT, LibC, Malloc Materials</strong></p>
+<p>Advanced pwn Challenge Materials.</p>
+<ul>
+   <li>LibC DB (may be down): <a href="http://libcdb.com/" rel="nofollow">http://libcdb.com/</a></li>
+   <li>GOT and PLT for Pwning <a href="https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html" rel="nofollow">https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html</a></li>
+   <li>Heap Security Checks: <a href="https://heap-exploitation.dhavalkapil.com/diving_into_glibc_heap/security_checks.html" rel="nofollow">https://heap-exploitation.dhavalkapil.com/diving_into_glibc_heap/security_checks.html</a></li>
+   <li>Best Heap Diagram Ever: <a href="https://raw.githubusercontent.com/cloudburst/libheap/master/heap.png" rel="nofollow">https://raw.githubusercontent.com/cloudburst/libheap/master/heap.png</a></li>
+   <li>Understanding glibc malloc: <a href="https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/" rel="nofollow">https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/</a></li>
+   <li>MallocInternals: <a href="https://sourceware.org/glibc/wiki/MallocInternals" rel="nofollow">https://sourceware.org/glibc/wiki/MallocInternals</a></li>
+   <li>Azeria Labs: ARM Heap Exploitation: <a href="https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/" rel="nofollow">https://azeria-labs.com/heap-exploitation-part-1-understanding-the-glibc-heap-implementation/</a></li>
+   <li>How 2 Heap, by Shellphish: <a href="https://github.com/shellphish/how2heap">https://github.com/shellphish/how2heap</a></li>
+</ul>
+<p><strong>Malware / Forensics / Threat Intel</strong></p>
+<p>Materials relating to &#8230;. well&#8230; malware reversing, forensics, threat intelligence and such things.</p>
+<ul>
+   <li>Quick bits on Forensics Challenges: <a href="https://bitvijays.github.io/LFC-Forensics.html" rel="nofollow">https://bitvijays.github.io/LFC-Forensics.html</a></li>
+   <li>Flare VM: <a href="https://github.com/fireeye/flare-vm">https://github.com/fireeye/flare-vm</a></li>
+   <li>Cisco Talos PyreBox: <a href="https://github.com/Cisco-Talos/pyrebox">https://github.com/Cisco-Talos/pyrebox</a></li>
+   <li>See bot documentation below about using the <code>!malware</code> bot command, and getting access to the #malware channel for discussions of real world exploits and malware.</li>
+   <li>MITRE’s Adversarial Tactics, Techniques, and Common Knowledge (ATT&amp;CK™): <a href="http://attack.mitre.org/wiki/Main_Page">http://attack.mitre.org/wiki/Main_Page</a></li>
+</ul>
+<p><strong>CDC Materials</strong></p>
+<p>Materials for learning Cyber Defense Competition skills.</p>
+<ul>
+   <li>Vulnerable Machine Images Archive: <a href="https://archive.wrccdc.org/images/" rel="nofollow">https://archive.wrccdc.org/images/</a></li>
+   <li>[Coming Soon] CDC Practice Range @ OSUSEC</li>
+</ul>
+<p><strong>Cryptography Materials</strong></p>
+<p>Resources pertaining to Cryptography</p>
+<ul>
+   <li>CryptoPals: <a href="https://cryptopals.com/" rel="nofollow">https://cryptopals.com/</a></li>
+   <li>Euler Project: <a href="https://projecteuler.net/" rel="nofollow">https://projecteuler.net/</a></li>
+   <li>Khan Academy Cryptography Unit: <a href="https://www.khanacademy.org/computing/computer-science/cryptography" rel="nofollow">https://www.khanacademy.org/computing/computer-science/cryptography</a></li>
+   <li>Learn Cryptography: <a href="https://learncryptography.com/Encryption/" rel="nofollow">https://learncryptography.com/Encryption/</a></li>
+   <li>Dr. Mike Rosulek&#8217;s Book: <a href="https://web.engr.oregonstate.edu/~rosulekm/crypto/" rel="nofollow">https://web.engr.oregonstate.edu/~rosulekm/crypto/</a></li>
+   <li>SageMath: <a href="https://www.sagemath.org/">https://www.sagemath.org/</a></li>
+</ul>
+<p><strong>Web Resources</strong></p>
+<p>Web Security Resources</p>
+<ul>
+   <li><a href="https://alf.nu/alert1/">alert(1) to win</a></li>
+   <li><a href="http://websec.fr">websec.fr</a> <img src="https://img.shields.io/badge/recommended-yes-green.svg"></li>
+   <li><a href="http://webhacking.kr/">webhacking.kr</a> <img src="https://img.shields.io/badge/recommended-yes-green.svg"></li>
+   <li><a href="https://0xf.at/">0xf.at</a></li>
+   <li><a href="http://google-gruyere.appspot.com/">Google Gruyere</a> <img src="https://img.shields.io/badge/difficulty-beginner-green.svg"> <img src="https://img.shields.io/badge/scoring-no-lightgrey.svg"></li>
+   <li><a href="https://hackburger.ee/">HackBurger</a></li>
+   <li> <a href="http://www.hackertest.net/">HackerTest</a></li>
+   <li><a href="http://overthewire.org/wargames/natas/">OverTheWire Natas</a> <img src="https://img.shields.io/badge/scoring-no-lightgrey.svg"></li>
+   <li> <a href="https://www.xssgame.com/">XSS Game</a></li>
+   <li><a href="https://xss-game.appspot.com/">XSS game area</a></li>
+   <li> <a href="https://xss.pwnfunction.com/">XSS PwnFunction</a></li>
+   <li>OWASP Top 10: <a href="https://www.owasp.org/index.php/Top_10-2017_Top_10">https://www.owasp.org/index.php/Top_10-2017_Top_10</a></li>
+   <li>OWASP New 2020: <a href="https://portswigger.net/polls/top-10-web-hacking-techniques-2020">https://portswigger.net/polls/top-10-web-hacking-techniques-2020</a></li>
+   <li>Burp Suite (Web/Network Analysis): <a href="https://portswigger.net/burp/communitydownload" rel="nofollow">https://portswigger.net/burp/communitydownload</a></li>
+   <li>Web Security Learning from PortSwigger: <a href="https://portswigger.net/web-security">https://portswigger.net/web-security</a></li>
+</ul>
+<p><strong>Misc</strong></p>
+<ul>
+   <li>Many cool lists for hackers: <a href="https://github.com/Hack-with-Github/Awesome-Hacking">https://github.com/Hack-with-Github/Awesome-Hacking</a></li>
+   <li>LiveOverflow YouTube Channel: <a href="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w" rel="nofollow">https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w</a></li>
+   <li>John Hammond YouTube Channel: <a href="https://www.youtube.com/channel/UCVeW9qkBjo3zosnqUbG7CFw" rel="nofollow">https://www.youtube.com/channel/UCVeW9qkBjo3zosnqUbG7CFw</a></li>
+</ul>
+<p>OTHER LINKS</p>
+<UL>
+   <li>
+      <a href="https://github.com/zardus/wargame-nexus">wargame-nexus is a collection of ctf links</a>
+      <a href="https://tryhackme.com">Try hack me contains links and virtualmachine challanges</a>
+   </li>
+</UL>
+</div>
+</body>
+</html>
