@@ -1,6 +1,0 @@
-# Allow example to allow all crawlers
-User-agent: *
-Allow: /
-
-
-Sitemap: https://inyuatfarmfresh.com/sittemap.xml

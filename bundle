@@ -1,0 +1,11 @@
+Configuration file: /home/icurus/Pictures/notes/blog/al-folio/_config.yml
+            Source: /home/icurus/Pictures/notes/blog/al-folio
+       Destination: /home/icurus/Pictures/notes/blog/al-folio/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+"Fetching external posts from medium.com:"
+"...fetching https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2"
+       Jekyll Feed: Generating feed for posts
+       Imagemagick: Disabled in site.config
+         AutoPages: Disabled/Not configured in site.config.
+        Pagination: Complete, processed 1 pagination page(s)
