@@ -3,7 +3,7 @@ layout: post
 title: Cybersecurity Path
 subtitle: Learn through First principles 
 gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
+# gh-badge: [star, fork, follow]
 tags: [cybersecurity.guide]
 comments: true
 ---
