@@ -176,6 +176,7 @@ r9:     Sixth Argument
 
 
 since in the c files the syscall function takes more operators one extra argument is added that pushes things to the next rargument register so to reverse this you just mov arguments one regsiter back eg 
+![Pasted image 20230714001630.png](/assets/img/20230714001630.png)
 
 what is in rdi goes to rax, what is in rsi to rdi  then on and on.
 the good thing about this method is that you do not need to check the syscall table thus saves you more time. 
