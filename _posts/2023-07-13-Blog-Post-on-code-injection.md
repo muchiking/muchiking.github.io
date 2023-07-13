@@ -159,7 +159,7 @@ syscall(SYS_close, fd);
 ```
 
 the assembly code generated looks like this
-![[Pasted image 20230713220301.png](/assets/img/20230713220301.png)]
+![Pasted image 20230713220301.png](/assets/img/20230713220301.png)
 
 
 this is syntax used in to pass values that are soon to be executed by a function in assembly.
