@@ -92,7 +92,7 @@ gcc -nostdlib -o thanksforreadintheblog thanksforreadintheblog.s
 though assembly is for chads it lacks documentation
 
 the best documentation out there are x86_64 syscals tables
-![[Pasted image 20230713211214.png]]
+![[Pasted image 20230713211214.png](/assets/img/20230713211214.png)
 
 as you can see they are not that clear like the flags to open the files i found it from linux kernel files written by the world wide wwe heavy weight champion  Linus Torvald  
 
@@ -115,17 +115,17 @@ POSIX stands for "Portable Operating System Interface." It is a set of standards
 
 this is how you implement it
 
-![[Pasted image 20230713213655.png]]
+![[Pasted image 20230713213655.png](/assets/img/20230713213655.png)
 
 after compiling you can get the assembly code by running objdump on the compiled binary 
 
-![[Pasted image 20230713214331.png]]
+![[Pasted image 20230713214331.png](/assets/img/20230713214331.png)
 
 
 
 
 
-![[Pasted image 20230713221523.png]]
+![[Pasted image 20230713221523.png](/assets/img/20230713221523.png)
 
 as you can see this registers match appart from rax 
 
@@ -159,7 +159,7 @@ syscall(SYS_close, fd);
 ```
 
 the assembly code generated looks like this
-![[Pasted image 20230713220301.png]]
+![[Pasted image 20230713220301.png](/assets/img/20230713220301.png)
 
 
 this is syntax used in to pass values that are soon to be executed by a function in assembly.
