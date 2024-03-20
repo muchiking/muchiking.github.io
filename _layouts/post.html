@@ -1,82 +1,153 @@
 ---
-layout: base
+layout: default
+# The posts' layout
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT Licensed
 ---
 
-{% include header.html type="post" %}
+<div class="row">
 
-<div class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
-  <div class="row">
-    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
 
-      {% if page.gh-repo %}
-        {% assign gh_split =  page.gh-repo | split:'/'  %}
-        {% assign gh_user =  gh_split[0]  %}
-        {% assign gh_repo =  gh_split[1]  %}
+    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-        <div id="header-gh-btns">
-          {% if page.gh-badge.size > 0 %}
-            {% for badge in page.gh-badge %}
-              {% case badge %}
-                {% when 'star'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                {% when 'watch'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                {% when 'fork'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                {% when 'follow'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
-              {% endcase %}
-            {% endfor %}
+      <h1 data-toc-skip>{{ page.title }}</h1>
+
+      <div class="post-meta text-muted d-flex flex-column">
+        <!-- Published date and author -->
+        <div>
+          Posted
+          <span class="timeago" data-toggle="tooltip" data-placement="bottom"
+           title="{{ page.date | date: site.data.date_format.tooltip }}">
+            {{ page.date | date: site.data.date_format.post }}
+            <i class="unloaded">{{ page.date | date_to_xmlschema }}</i>
+          </span>
+          by
+          <span class="author">
+          {% if page.author %}
+            {{ page.author }}
+          {% else%}
+            {{ site.author }}
           {% endif %}
+          </span>
         </div>
-      {% endif %}
 
-      {% if page.before-content %}
-        <div class="before-content">
-          {% for file in page.before-content %}
-            {% include {{ file }} %}
+        <!-- lastmod -->
+        {%- capture filename -%}
+          {{ page.url | split: "/" | last }}
+        {%- endcapture -%}
+
+        {% for item in site.data.updates %}
+          {% assign encode_filename = item.filename | url_encode %}
+          {% if filename == encode_filename %}
+            {% assign lastmod = item.lastmod %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if lastmod %}
+        <div>
+          Updated
+          <span class="timeago lastmod"
+            data-toggle="tooltip" data-placement="bottom"
+             title="{{ lastmod | date: site.data.date_format.tooltip }}">
+            {{ lastmod | date: site.data.date_format.post }}
+            <i class="unloaded">{{ lastmod | date_to_xmlschema}}</i>
+          </span>
+        </div>
+        {% endif %}
+
+        <!-- page views -->
+        {% if site.google_analytics.pv.enabled %}
+        <div>
+          <span id="pv" class="pageviews"><i class="fas fa-spinner fa-spin fa-fw"></i></span>
+          views
+        </div>
+        {% endif %}
+
+      </div> <!-- .post-meta -->
+
+      <div class="post-content">
+        {% if page.image %}
+          <img src="{{ page.image }}">
+        {% endif %}
+        <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+        {% if content contains '<img src=' %}
+          {{ content | replace: '<img src=', '<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src=' }}
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </div>
+
+      <div class="post-tail-wrapper text-muted">
+
+        <!-- categories -->
+        {% if page.categories.size > 0 %}
+        <div class="post-meta mb-3">
+          <i class="far fa-folder-open fa-fw mr-1"></i>
+          {% for category in page.categories %}
+            <a href='{{ site.baseurl }}/categories/{{ category | replace: ' ', '-' | downcase | url_encode }}/'>{{ category }}</a>
+            {%- unless forloop.last -%}, {%- endunless -%}
           {% endfor %}
         </div>
-      {% endif %}
+        {% endif %}
 
-      <article role="main" class="blog-post">
-        {{ content }}
-      </article>
-
-      {% if page.tags.size > 0 %}
-        <div class="blog-tags">
-          <span>Tags:</span>
+        <!-- tags -->
+        {% if page.tags.size > 0 %}
+        <div class="post-tags">
+          <i class="fa fa-tags fa-fw mr-1"></i>
           {% for tag in page.tags %}
-            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+          <a href="{{ site.baseurl }}/tags/{{ tag | replace: ' ', '-' | downcase | url_encode }}/"
+            class="post-tag no-text-decoration" >
+            {{- tag -}}
+          </a>
           {% endfor %}
-        </div>
-      {% endif %}
-
-      {% if page.after-content %}
-        <div class="after-content">
-          {% for file in page.after-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      {% if page.social-share %}
-        {% include social-share.html %}
-      {% endif %}
-
-      <ul class="pagination blog-pager">
-        {% if page.previous.url %}
-        <li class="page-item previous">
-          <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">&larr; Previous Post</a>
-        </li>
+          </div>
         {% endif %}
-        {% if page.next.url %}
-        <li class="page-item next">
-          <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">Next Post &rarr;</a>
-        </li>
-        {% endif %}
-      </ul>
-      {% include comments.html %}
-    </div>
-  </div>
-</div>
+
+        <div class="post-tail-bottom
+          d-flex justify-content-between align-items-center pt-5 pb-2">
+          {% if site.data.rights.license %}
+          <div class="license-wrapper">
+            This post is licensed under
+            <a href="{{ site.data.rights.license.link }}">{{ site.data.rights.license.name }}</a>
+            by the author.
+          </div>
+          {% endif %}
+
+          {% include post-sharing.html %}
+
+        </div><!-- .post-tail-bottom -->
+
+      </div><!-- div.post-tail -->
+
+    </div> <!-- .post -->
+
+  </div> <!-- #post-wrapper -->
+
+  {% include panel.html %}
+
+</div> <!-- .row -->
+
+<div class="row">
+  <div id="post-extend-wrapper" class="col-12 col-lg-11 col-xl-8">
+
+    <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+      {% include post-nav.html %}
+
+      {% if site.disqus.comments and page.comments %}
+        {% include disqus.html %}
+      {% endif %}
+
+      {% include related-posts.html %}
+
+    </div> <!-- .pl-1 pr-1 -->
+
+  </div> <!-- #post-extend-wrapper -->
+
+</div> <!-- .row -->
+
+{% include lozad.html %}
